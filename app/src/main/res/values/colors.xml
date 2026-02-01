@@ -7,10 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    
-    <!-- App Colors -->
     <color name="gradient_start">#667EEA</color>
     <color name="gradient_end">#764BA2</color>
     <color name="mesh_color">#00FF88</color>
-    <color name="mesh_secondary">#00BFFF</color>
 </resources>
