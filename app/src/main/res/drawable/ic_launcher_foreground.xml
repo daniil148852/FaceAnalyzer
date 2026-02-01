@@ -5,88 +5,60 @@
     android:viewportWidth="108"
     android:viewportHeight="108">
     
-    <!-- Face outline -->
+    <!-- Face outline circle -->
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M54,24
-                         C35.2,24 20,39.2 20,58
-                         C20,76.8 35.2,92 54,92
-                         C72.8,92 88,76.8 88,58
-                         C88,39.2 72.8,24 54,24z
-                         M54,28
-                         C70.6,28 84,41.4 84,58
-                         C84,74.6 70.6,88 54,88
-                         C37.4,88 24,74.6 24,58
-                         C24,41.4 37.4,28 54,28z" />
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:pathData="M54,28 A26,26 0 1,1 53.99,28 Z" />
     
     <!-- Left eye -->
-    <circle
+    <path
         android:fillColor="#FFFFFF"
-        android:cx="42"
-        android:cy="52"
-        android:r="6" />
+        android:pathData="M42,48 m-5,0 a5,5 0 1,1 10,0 a5,5 0 1,1 -10,0" />
     
     <!-- Right eye -->
-    <circle
+    <path
         android:fillColor="#FFFFFF"
-        android:cx="66"
-        android:cy="52"
-        android:r="6" />
+        android:pathData="M66,48 m-5,0 a5,5 0 1,1 10,0 a5,5 0 1,1 -10,0" />
     
     <!-- Smile -->
     <path
-        android:fillColor="@android:color/transparent"
+        android:fillColor="#00000000"
         android:strokeColor="#FFFFFF"
         android:strokeWidth="3"
         android:strokeLineCap="round"
-        android:pathData="M38,68 Q54,80 70,68" />
-    
-    <!-- Scan line 1 -->
-    <path
-        android:strokeColor="#00FF88"
-        android:strokeWidth="2"
-        android:strokeAlpha="0.8"
-        android:pathData="M28,45 L44,45" />
-    
-    <!-- Scan line 2 -->
-    <path
-        android:strokeColor="#00FF88"
-        android:strokeWidth="2"
-        android:strokeAlpha="0.8"
-        android:pathData="M64,45 L80,45" />
-    
-    <!-- Scan line 3 -->
-    <path
-        android:strokeColor="#00FF88"
-        android:strokeWidth="2"
-        android:strokeAlpha="0.6"
-        android:pathData="M30,75 L78,75" />
+        android:pathData="M40,62 Q54,74 68,62" />
     
     <!-- Corner brackets - top left -->
     <path
-        android:strokeColor="#00BFFF"
+        android:fillColor="#00000000"
+        android:strokeColor="#00FF88"
         android:strokeWidth="3"
         android:strokeLineCap="round"
-        android:pathData="M26,38 L26,30 L34,30" />
+        android:pathData="M26,38 L26,28 L36,28" />
     
     <!-- Corner brackets - top right -->
     <path
-        android:strokeColor="#00BFFF"
+        android:fillColor="#00000000"
+        android:strokeColor="#00FF88"
         android:strokeWidth="3"
         android:strokeLineCap="round"
-        android:pathData="M74,30 L82,30 L82,38" />
+        android:pathData="M72,28 L82,28 L82,38" />
     
     <!-- Corner brackets - bottom left -->
     <path
-        android:strokeColor="#00BFFF"
+        android:fillColor="#00000000"
+        android:strokeColor="#00FF88"
         android:strokeWidth="3"
         android:strokeLineCap="round"
-        android:pathData="M26,78 L26,86 L34,86" />
+        android:pathData="M26,70 L26,80 L36,80" />
     
     <!-- Corner brackets - bottom right -->
     <path
-        android:strokeColor="#00BFFF"
+        android:fillColor="#00000000"
+        android:strokeColor="#00FF88"
         android:strokeWidth="3"
         android:strokeLineCap="round"
-        android:pathData="M74,86 L82,86 L82,78" />
+        android:pathData="M72,80 L82,80 L82,70" />
 </vector>
