@@ -4,29 +4,29 @@
     android:height="192dp"
     android:viewportWidth="192"
     android:viewportHeight="192">
+    <!-- Circular background -->
     <path
         android:fillColor="#667EEA"
-        android:pathData="M96,0 A96,96 0 1,1 96,192 A96,96 0 1,1 96,0z" />
-    <circle
-        android:fillColor="@android:color/transparent"
+        android:pathData="M96,0 A96,96 0 1,1 95.99,0 Z" />
+    <!-- Face circle -->
+    <path
+        android:fillColor="#00000000"
         android:strokeColor="#FFFFFF"
         android:strokeWidth="5"
-        android:cx="96"
-        android:cy="96"
-        android:r="58" />
-    <circle
-        android:fillColor="#FFFFFF"
-        android:cx="75"
-        android:cy="86"
-        android:r="9" />
-    <circle
-        android:fillColor="#FFFFFF"
-        android:cx="117"
-        android:cy="86"
-        android:r="9" />
+        android:pathData="M96,38 A58,58 0 1,1 95.99,38 Z" />
+    <!-- Left eye -->
     <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,82 m-9,0 a9,9 0 1,1 18,0 a9,9 0 1,1 -18,0" />
+    <!-- Right eye -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M117,82 m-9,0 a9,9 0 1,1 18,0 a9,9 0 1,1 -18,0" />
+    <!-- Smile -->
+    <path
+        android:fillColor="#00000000"
         android:strokeColor="#FFFFFF"
         android:strokeWidth="5"
         android:strokeLineCap="round"
-        android:pathData="M68,116 Q96,138 124,116" />
+        android:pathData="M68,118 Q96,142 124,118" />
 </vector>
