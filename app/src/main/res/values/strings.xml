@@ -1,12 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Face Analyzer</string>
-    <string name="camera_permission_required">Camera permission is required for face analysis</string>
-    <string name="grant_permission">Grant Permission</string>
-    <string name="no_face_detected">No face detected</string>
-    <string name="position_face">Position your face in the frame</string>
-    <string name="switch_camera">Switch Camera</string>
-    <string name="toggle_mesh">Toggle Mesh</string>
-    <string name="toggle_contours">Toggle Contours</string>
-    <string name="toggle_landmarks">Toggle Landmarks</string>
 </resources>
