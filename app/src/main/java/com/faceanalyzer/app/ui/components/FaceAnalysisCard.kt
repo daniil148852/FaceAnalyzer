@@ -1,7 +1,6 @@
 package com.faceanalyzer.app.ui.components
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandVertically
@@ -10,7 +9,6 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -167,8 +165,9 @@ private fun OverallScoreSection(score: Int) {
         Spacer(modifier = Modifier.height(12.dp))
 
         Box(contentAlignment = Alignment.Center) {
+            // Fixed: Use Float directly instead of lambda
             CircularProgressIndicator(
-                progress = { animatedScore / 100f },
+                progress = animatedScore / 100f,
                 modifier = Modifier.size(100.dp),
                 strokeWidth = 8.dp,
                 color = Color(healthLevel.color),
@@ -205,14 +204,14 @@ private fun MetricsGrid(analysisResult: FaceAnalysisResult) {
                 icon = Icons.Outlined.Balance,
                 label = "Symmetry",
                 value = analysisResult.faceCondition.symmetryScore,
-                color = analysisResult.faceCondition.symmetryScore.toHealthLevel().let { Color(it.color) }
+                color = Color(analysisResult.faceCondition.symmetryScore.toHealthLevel().color)
             )
             MetricItem(
                 modifier = Modifier.weight(1f),
                 icon = Icons.Outlined.Visibility,
                 label = "Eye Health",
                 value = analysisResult.faceCondition.eyeHealthScore,
-                color = analysisResult.faceCondition.eyeHealthScore.toHealthLevel().let { Color(it.color) }
+                color = Color(analysisResult.faceCondition.eyeHealthScore.toHealthLevel().color)
             )
         }
         
@@ -222,17 +221,17 @@ private fun MetricsGrid(analysisResult: FaceAnalysisResult) {
         ) {
             MetricItem(
                 modifier = Modifier.weight(1f),
-                icon = Icons.Outlined.FaceRetouchingNatural,
+                icon = Icons.Outlined.Face,
                 label = "Skin Health",
                 value = analysisResult.faceCondition.skinHealthEstimate,
-                color = analysisResult.faceCondition.skinHealthEstimate.toHealthLevel().let { Color(it.color) }
+                color = Color(analysisResult.faceCondition.skinHealthEstimate.toHealthLevel().color)
             )
             MetricItem(
                 modifier = Modifier.weight(1f),
                 icon = Icons.Outlined.Straighten,
                 label = "Proportions",
                 value = analysisResult.faceCondition.facialProportionScore,
-                color = analysisResult.faceCondition.facialProportionScore.toHealthLevel().let { Color(it.color) }
+                color = Color(analysisResult.faceCondition.facialProportionScore.toHealthLevel().color)
             )
         }
     }
@@ -309,7 +308,7 @@ private fun SuggestionsSection(suggestions: List<String>) {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Icon(
-                    imageVector = Icons.Filled.TipsAndUpdates,
+                    imageVector = Icons.Filled.Lightbulb,
                     contentDescription = null,
                     modifier = Modifier.size(16.dp),
                     tint = GradientStart
